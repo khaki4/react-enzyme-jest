@@ -28,4 +28,10 @@ class App extends Component {
   }
 }
 
+export class Link extends Component {
+  render() {
+    return this.props.hide ? null : <a href={this.props.address}>Click</a>
+  }
+}
+
 export default App;
