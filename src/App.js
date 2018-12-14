@@ -10,7 +10,8 @@ class App extends Component {
 
     this.state = {
       on: false,
-      input: ''
+      input: '',
+      mainColor: 'blue',
     }
   }
 
@@ -31,6 +32,7 @@ class App extends Component {
           >
             Hello World
           </a>
+          <h3 className={this.state.mainColor}>Everyone is Welcome!</h3>
         </header>
         <p className="button-state">{this.state.on ?
           'Yes!' : 'No!'
