@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> matches the snapshot 1`] = `
+exports[`<App /> mount rendering matches the snapshot 1`] = `
 <div
   className="App"
 >
@@ -29,5 +29,67 @@ exports[`<App /> matches the snapshot 1`] = `
       Hello World
     </a>
   </header>
+  <p
+    className="button-state"
+  >
+    No!
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Click
+  </button>
+  <h2 />
+  <input
+    onChange={[Function]}
+    type="text"
+  />
+</div>
+`;
+
+exports[`<App /> shallow rendering matches the snapshot 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+    <p>
+      Edit 
+      <code>
+        src/App.js
+      </code>
+       and save to reload.
+    </p>
+    Test
+    <a
+      className="App-link"
+      href="https://reactjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Hello World
+    </a>
+  </header>
+  <p
+    className="button-state"
+  >
+    No!
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Click
+  </button>
+  <h2 />
+  <input
+    onChange={[Function]}
+    type="text"
+  />
 </div>
 `;

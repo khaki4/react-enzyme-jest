@@ -5,6 +5,15 @@ import './App.css';
 const Test = () => <div>Testing</div>
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      on: false,
+      input: ''
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -23,6 +32,14 @@ class App extends Component {
             Hello World
           </a>
         </header>
+        <p className="button-state">{this.state.on ?
+          'Yes!' : 'No!'
+        }</p>
+        <button
+          onClick={() => this.setState({ on: true })}
+        >Click</button>
+        <h2>{this.state.input}</h2>
+        <input type="text"  onChange={(e) => this.setState({ input: e.currentTarget.value })} />
       </div>
     );
   }
