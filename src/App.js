@@ -24,6 +24,10 @@ class App extends Component {
     this.setState({ lifeCycle: 'componentWillReceiveProps' });
   }
 
+  handleString(str) {
+    return str === 'Hello World';
+  }
+
   render() {
     return (
       <div className="App">

@@ -50,6 +50,14 @@ describe('<App /> shallow rendering', () => {
     expect(wrapper.find('.lifeCycle').text()).toBe('componentWillReceiveProps');
   });
 
+  it('handleStrings function retuns correctlyh', () => {
+    const wrapper = shallow(<App />);
+    const trueReturn = wrapper.instance().handleString('Hello World');
+    const falseReturn = wrapper.instance().handleString('');
+    expect(trueReturn).toBe(true);
+    expect(falseReturn).toBe(false);
+  });
+
   it('on input change, title changes text', function () {
     const wrapper = shallow(<App />);
     const input = wrapper.find('input');
