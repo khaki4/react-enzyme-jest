@@ -35,6 +35,21 @@ describe('<App /> shallow rendering', () => {
     expect(wrapper.find('.button-state').text()).toBe('Yes!');
   });
 
+  it('calls componentDidMount, updates p tag text', function () {
+    const spy = jest.spyOn(App.prototype, 'componentDidMount');
+    const wrapper = mount(<App />);
+    wrapper.instance().componentDidMount();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('setProps calls componentWillReciveProps', function () {
+    const spy = jest.spyOn(App.prototype, 'componentWillReceiveProps');
+    const wrapper = shallow(<App />);
+    wrapper.setProps({ hide: true });
+    expect(App.prototype.componentWillReceiveProps.mock.calls.length).toBe(1);
+    expect(wrapper.find('.lifeCycle').text()).toBe('componentWillReceiveProps');
+  });
+
   it('on input change, title changes text', function () {
     const wrapper = shallow(<App />);
     const input = wrapper.find('input');
